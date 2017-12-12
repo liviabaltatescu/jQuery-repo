@@ -10,18 +10,18 @@
             $("#getcontent").click(getContent);
             $("#loadhtml").click(loadHTML);
         });
-        
+
         function getContent() {
-            $.ajax("sampletextcontent.txt", 
-                   { success: setContent, 
-                     type: "GET", 
+            $.ajax("sampletextcontent.txt",
+                   { success: setContent,
+                     type: "GET",
                      dataType: "text" });
         }
-        
-        function setContent(data, status, jqxhr) {
-            $("#example").text(data);
-        }
-        
+
+        // function setContent(data, status, jqxhr) {
+        //     $("#example").text(data);
+        // }
+
         function loadHTML() {
             $("#example").load("samplehtml.html");
         }
