@@ -6,8 +6,18 @@
     <link rel="stylesheet" href="../style.css" />
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
-    $("document").ready(function() {
-    });
+    // $("document").ready(function() {
+    //   $("#example p:odd").wrap("<div style='color:red'/>");
+    // });
+
+    function replacementFn() {
+        if ($(this).text().indexOf("1") != -1) {
+            return "<p>This is paragraph uno</p>";
+        }
+        else {
+            return this.outerHTML;
+        }
+    }
     </script>
 </head>
 
