@@ -7,7 +7,11 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
-        });
+          $("#example").after("<p id='alts'>");
+          $("img").each(function() {
+             $("#alts").append($(this).attr("alt") + " ");
+          });
+          });
     </script>
     <style type="text/css">
         img {
